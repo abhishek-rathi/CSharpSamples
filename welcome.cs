@@ -7,14 +7,14 @@ namespace master
 	{
 		public master()
 		{
-			Console.WriteLine ("Lets Get Started \n\n");
+			Console.WriteLine ("Lets Get Started \n ...");
 		}
 	}
 	
-	class storage
+	static class storage
 	{
-		public string one;
-		public string two;
+		public static string one;
+		public static string two;
 	}
 }
 
@@ -26,12 +26,12 @@ namespace abbytest.one
 	   static welcome ()
 	   {
 	   	welcome w = new welcome();
-	   	Console.WriteLine ("Welcome Called!");	   	
+	   	Console.Write ("Welcome Called! \n ... \n");
 	   }
 	   
 	   static void Main(string[] args)
 	   {
-		 Console.WriteLine("\nWelcome. FM {0} LN {1}",args[0],args[1]);
+		 Console.Write("\nWelcome. FM {0} LN {1} \n ... \n",args[0],args[1]);
 		 Console.Write("Currrent Time ");
 		 string time = Console.ReadLine();
 		 Console.WriteLine("Time to sleep {0}",Int32.Parse(time)+4);
@@ -86,10 +86,14 @@ namespace abbytest.one
 		 else
 		 	Console.WriteLine ("{0}",fmmthdin);
 
-		 master.storage st = new master.storage();
-	      	 st.one = "1 var";
-	      	 st.two = "2 var";
-     	 	 Console.WriteLine ("\n {0} {1}",st.one,st.two);
+		 /* master.storage st = new master.storage();
+		 st.one = "1 var";
+		 st.two = "2 var";
+		 Console.WriteLine ("\n {0} {1}",st.one,st.two);*/
+		 
+	      	 master.storage.one = "1 var";
+	      	 master.storage.two = "2 var";
+     	 	 Console.WriteLine ("\n {0} {1}",master.storage.one,master.storage.two);
 	   }
 	   
 	}
