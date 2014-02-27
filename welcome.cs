@@ -10,6 +10,12 @@ namespace master
 			Console.WriteLine ("Lets Get Started \n\n");
 		}
 	}
+	
+	class storage
+	{
+		public string one;
+		public string two;
+	}
 }
 
 namespace abbytest.one
@@ -73,7 +79,17 @@ namespace abbytest.one
 		 }
 
 		 outmthds O = new outmthds("a","b");
-		 O.fmthd();
+		 string fmmthdin = O.fmthd();
+		 
+		 if (fmmthdin == "bye")
+		 	Console.WriteLine ("Ok!");
+		 else
+		 	Console.WriteLine ("{0}",fmmthdin);
+
+		 master.storage st = new master.storage();
+	      	 st.one = "1 var";
+	      	 st.two = "2 var";
+     	 	 Console.WriteLine ("\n {0} {1}",st.one,st.two);
 	   }
 	   
 	}
@@ -83,14 +99,11 @@ namespace abbytest.two
 {
 	class outmthds
 	{
-	     public void fmthd()
+	     public string fmthd()
 	     {
 		 Console.Write ("\nfmthd - type bye: ");
 		 string fmmthdin = Console.ReadLine ();
-		 if (fmmthdin == "bye")
-		 	Console.WriteLine ("Ok!");
-		 else
-		 	Console.WriteLine ("{0}",fmmthdin);
+		 return fmmthdin;
 	     }
 	     
 	     public outmthds (string a, string b)
